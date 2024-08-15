@@ -2,21 +2,22 @@
 layout: archive
 ---
 
-{{ content }}
+<h3 class="archive__subtitle">Hello there! My name is Chris Felt.</h3>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<div>
+  <p>
+    Welcome to my site! Here you will find supplementary information for my resume, including links to my GitHub and LinkedIn profiles, and publications for which I am a contributing author.
+    <br><br>
+  </p>
+</div>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+<h3 class="archive__subtitle">About me.</h3>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
+<div>
+  <p>
+    I'm a junior computer scientist. I'm also a U.S. Army veteran and former geological researcher with the U.S. Army Corps of Engineers.<br><br>
+    I'm passionate about building accurate stories from data and developing software tools to help people. In my work as a gelogical researcher, I picked up R as a means to analyze and manage large data sets. I loved working with data and making tools with R to help other researchers so much that I jumped into a new career as a computer scientist!  
+  </p>
 </div>
 
 {% include paginator.html %}
